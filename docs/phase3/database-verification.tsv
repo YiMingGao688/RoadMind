@@ -1,0 +1,24 @@
+id	name	deleted
+75	持久化验收-20261026175046	1
+active_test_rows
+0
+development_rows
+0
+version	description	success
+1	create knowledge base	1
+version	description	success
+1	create knowledge base	1
+Table	Non_unique	Key_name	Seq_in_index	Column_name	Collation	Cardinality	Sub_part	Packed	Null	Index_type	Comment	Index_comment	Visible	Expression
+kb_knowledge_base	0	PRIMARY	1	id	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	0	uk_kb_active_name	1	active_name	A	0	NULL	NULL	YES	BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_deleted_updated	1	deleted	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_deleted_updated	2	updated_at	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_deleted_updated	3	id	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_category_deleted_updated	1	category	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_category_deleted_updated	2	deleted	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_category_deleted_updated	3	updated_at	A	0	NULL	NULL		BTREE			YES	NULL
+kb_knowledge_base	1	idx_kb_category_deleted_updated	4	id	A	0	NULL	NULL		BTREE			YES	NULL
+final_active_test_rows
+0
+final_development_rows
+0

@@ -1,0 +1,42 @@
+# 数据库连接必须由启动环境提供；本地 .env.local 由 scripts/start-backend.ps1 加载。
+spring:
+  application:
+    name: roadmind-backend
+  datasource:
+    url: ${ROADMIND_DB_URL}
+    username: ${ROADMIND_DB_USERNAME}
+    password: ${ROADMIND_DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 5000
+      # DATETIME 按 UTC 存储，避免数据库系统时区影响应用时间戳。
+      connection-init-sql: "SET time_zone = '+00:00'"
+  flyway:
+    locations: classpath:db/migration
+    clean-disabled: true
+    validate-on-migrate: true
+    baseline-on-migrate: false
+  sql:
+    init:
+      mode: never
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+
+server:
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+
+# 仅公开基础健康检查；不对外暴露配置、环境变量或详细组件信息。
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never

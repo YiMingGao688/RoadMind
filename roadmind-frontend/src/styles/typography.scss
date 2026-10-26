@@ -1,0 +1,68 @@
+/* 其余页面只同步文字与图标规范，不重写布局和业务交互。 */
+.app-shell { font-family: var(--font-family-ui); font-size: var(--font-body); line-height: var(--leading-body); }
+.app-shell svg.lucide { fill: none; stroke-width: var(--icon-stroke); stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.app-main .page-heading h1 { font-size: var(--font-title); font-weight: var(--weight-semibold); color: var(--ink); line-height: 1.5; }
+.app-main .page-heading p { font-size: var(--font-body); color: var(--muted); line-height: var(--leading-body); }
+.app-main .section-heading h2, .app-main .section-heading h3 { font-size: var(--font-section); font-weight: var(--weight-semibold); line-height: 28px; color: var(--ink); }
+.app-main .page-heading { margin-bottom: var(--space-6); }
+.app-main :is(.library-card h2, .mini-kb-card h3, .case-card h3, .advice-summary h3) { color: var(--ink); font-size: var(--font-card); font-weight: var(--weight-semibold); line-height: 26px; }
+.app-main :is(.message-text, .user-message-text, .document-preview, .submitted-situation p, .suggestion-list, .observation-list li) { color: var(--text); font-size: var(--font-body); line-height: 1.8; }
+.app-main :is(.library-card > p, .case-card > p, .chunk-text, .advice-empty > p) { color: var(--text); font-size: var(--font-ui); line-height: 1.8; }
+.app-main :is(.subtle, .field-hint, .config-note, .results-footnote, .composer-disclaimer, .message-tools, .history-footnote, .reference-disclaimer, .table-footer, .library-tip, .fill-example, .result-query, .slider-labels, .case-card footer, .advice-summary p) { color: var(--muted); font-size: var(--font-small); line-height: 1.8; }
+.app-main :is(.composer-top > span, .composer-bottom > span, .message-author, .history-title, .document-filters, .el-form-item__label, .hit-title > strong, .advice-section h3) { color: var(--text); font-size: var(--font-ui); line-height: 24px; }
+.app-main :is(.reference-title strong, .document-name strong, .advice-references strong) { color: var(--text); font-size: var(--font-ui); font-weight: var(--weight-semibold); line-height: 24px; }
+.app-main :is(.reference-card > p, .reference-meta, .reference-meta span, .document-name small, .document-table .el-tag, .hit-title > span, .hit-scores > span, .hit-scores strong, .advice-references button span, .case-top small) { font-size: var(--font-small); line-height: 22px; }
+.app-main :is(.document-name small, .hit-title > span, .reference-meta, .reference-meta span, .case-top small, .table-footer span) { color: var(--muted); }
+.app-main .table-footer span { font-size: var(--font-small); }
+.app-main .document-name strong { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+.app-main .document-name > span:last-child { flex: 1; }
+.app-main .el-table { font-size: var(--font-ui); --el-table-header-text-color: #64748b; }
+.app-main .el-table th.el-table__cell { font-size: var(--font-small); font-weight: var(--weight-medium); }
+.app-main .el-table td.el-table__cell { color: var(--text); }
+.app-main .reference-meta { flex-wrap: wrap; }
+.app-main .composer .el-textarea__inner { font-size: var(--font-body); line-height: 26px; }
+.app-main .composer-top .el-select__wrapper { font-size: var(--font-small); min-height: 32px; }
+.app-main .composer-bottom .el-button { height: 36px; font-size: var(--font-ui); }
+.app-main .message-author { font-weight: var(--weight-semibold); }
+.app-main .message-author .demo-badge { font-size: var(--font-caption); }
+.app-main .message-citations button { font-size: var(--font-small); line-height: 22px; }
+.app-main .message-citations .icon { width: 16px; height: 16px; }
+.app-main .history-title .icon { width: 18px; height: 18px; }
+.app-main .conversation-toolbar strong { font-size: var(--font-ui); font-weight: var(--weight-semibold); }
+.app-main .conversation-toolbar .subtle { font-size: var(--font-small); }
+.app-main .chat-welcome h2 { font-size: 20px; font-weight: var(--weight-semibold); }
+.app-main .chat-welcome p { font-size: var(--font-ui); line-height: 24px; }
+.app-main .suggested-questions button { font-size: var(--font-ui); line-height: 24px; }
+.app-main .knowledge-icon { display: inline-flex; align-items: center; justify-content: center; width: var(--icon-container-size); height: var(--icon-container-size); padding: 0; border: 0; border-radius: var(--radius-md); flex-shrink: 0; }
+.app-main .knowledge-icon svg { width: var(--icon-size); height: var(--icon-size); }
+.app-main .knowledge-icon.tone-blue { color: var(--brand); background: #edf2ff; }
+.app-main .knowledge-icon.tone-teal { color: var(--status-teal); background: #edf7f4; }
+.app-main .knowledge-icon.tone-orange { color: var(--status-warning); background: #fff7e8; }
+.app-main .knowledge-icon.tone-purple { color: var(--status-purple); background: #f3effc; }
+.app-shell .sidebar .brand strong { font-size: 20px; font-weight: 700; color: var(--ink); }
+.app-shell .sidebar .brand small { font-size: var(--font-small); letter-spacing: .12em; color: var(--muted); }
+.app-shell .sidebar .brand-version { font-size: var(--font-caption); font-weight: var(--weight-medium); }
+.app-shell .sidebar .brand img { width: var(--icon-container-size); height: var(--icon-container-size); }
+.app-shell .sidebar .workspace-switch { gap: var(--space-3); margin-top: var(--space-6); }
+.app-shell .sidebar .workspace-avatar { width: var(--icon-container-sm); height: var(--icon-container-sm); border: 0; background: var(--brand-soft); color: var(--brand); }
+.app-shell .sidebar .workspace-avatar svg { width: var(--icon-size); height: var(--icon-size); }
+.app-shell .sidebar .workspace-switch strong { font-size: var(--font-ui); font-weight: var(--weight-semibold); color: var(--text); }
+.app-shell .sidebar .workspace-switch small { font-size: var(--font-small); color: var(--muted); }
+.app-shell .sidebar .nav-item { height: 44px; color: var(--text); font-size: 14px; font-weight: 500; gap: var(--space-3); }
+.app-shell .sidebar .nav-item.active { color: var(--brand); background: #e6edff; font-weight: 600; }
+.app-shell .sidebar .nav-item.active::before { background: var(--brand); top: 14px; }
+.app-shell .sidebar .nav-icon { width: var(--icon-size); height: var(--icon-size); }
+.app-shell .sidebar .nav-section-label { color: var(--muted); font-size: var(--font-small); }
+.app-shell .sidebar .nav-ai-label { font-size: var(--font-caption); color: var(--muted); }
+.app-shell .sidebar :is(.help-link, .sidebar-footer, .sidebar-footer small) { color: var(--muted); font-size: var(--font-small); }
+.app-shell .topbar .topbar-location { font-size: var(--font-ui); }
+.app-shell .topbar .topbar-location strong { color: var(--text); font-weight: var(--weight-medium); }
+.app-shell .topbar :is(.global-search, .environment-tag) { color: var(--muted); font-size: var(--font-small); }
+.app-shell .topbar .global-search kbd { font-size: var(--font-caption); }
+.app-shell .topbar .icon-button { width: var(--icon-container-sm); height: var(--icon-container-sm); }
+.app-shell .topbar .icon-button svg { width: var(--icon-size); height: var(--icon-size); }
+.app-shell .topbar .user-avatar { width: var(--icon-container-sm); height: var(--icon-container-sm); font-size: var(--font-caption); }
+.app-shell .icon-button:disabled, .app-shell button:disabled .lucide { opacity: .5; }
+.app-shell .demo-badge, .app-shell .count-pill { font-size: var(--font-caption); }
+.font-attribution { padding-top: var(--space-4); margin-bottom: var(--space-2); border-top: 1px solid var(--line); color: var(--muted); font-size: var(--font-small); line-height: 24px; }
+@media (max-width: 760px) { .app-main .page-heading h1 { font-size: 24px; }.app-main .chat-view .page-heading h1 { font-size: 22px; }.app-main .chat-view .page-heading p { display: none; }.app-main .chat-view .page-heading-actions .el-button { font-size: var(--font-small); }.app-shell .sidebar .brand-version { display: none; } }

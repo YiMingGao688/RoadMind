@@ -1,0 +1,25 @@
+/* 第三阶段只增加数据来源、服务端分页与状态反馈，沿用六页设计系统。 */
+.knowledge-mode-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; font-size: 13px; line-height: 24px; color: var(--muted); }
+.knowledge-mode-bar .el-select { width: 200px; flex-shrink: 0; }
+.knowledge-loading { padding: 32px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+.knowledge-loading > span { display: block; font-size: 13px; margin-top: 24px; color: var(--muted); }
+.knowledge-error { padding: 40px 24px; text-align: center; border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--surface); }
+.knowledge-error h2 { font-size: 18px; line-height: 28px; }
+.knowledge-error p { margin: 12px 0 24px; color: var(--muted); font-size: 14px; line-height: 24px; }
+.knowledge-pagination { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; }
+.knowledge-pagination > span { font-size: 13px; color: var(--muted); }
+.knowledge-delete-link { margin-left: 12px; }
+.real-knowledge-info { padding: 24px; }
+.real-knowledge-info > .icon { color: var(--brand); width: 24px; height: 24px; margin-bottom: 16px; }
+.real-knowledge-info h2 { font-size: 17px; line-height: 28px; }
+.real-knowledge-info dl { margin: 24px 0; font-size: 14px; line-height: 24px; }
+.real-knowledge-info dt { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+.real-knowledge-info dd { margin: 0 0 16px; color: var(--text); }
+.real-knowledge-info p { font-size: 13px; line-height: 24px; color: var(--muted); padding-top: 16px; border-top: 1px solid var(--line); }
+@media (max-width: 760px) {
+  .knowledge-mode-bar { align-items: stretch; flex-direction: column; gap: 12px; }
+  .knowledge-mode-bar .el-select { width: 100%; }
+  .knowledge-pagination { flex-direction: column; align-items: flex-start; }
+  .knowledge-pagination .el-pagination { max-width: 100%; flex-wrap: wrap; height: auto; row-gap: 12px; }
+  .knowledge-pagination .el-pagination__sizes { width: 100%; }
+}

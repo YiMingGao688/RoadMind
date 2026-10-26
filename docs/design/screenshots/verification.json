@@ -1,0 +1,259 @@
+{
+  "date": "2026-10-26",
+  "server": "production preview :4173",
+  "browser": "156.0.4314.42",
+  "errors": [],
+  "warnings": [],
+  "businessRequests": [],
+  "failures": [],
+  "platformFonts": [
+    {
+      "familyName": "MiSans",
+      "postScriptName": "MiSans-Semibold",
+      "isCustomFont": true,
+      "glyphCount": 14
+    }
+  ],
+  "metrics": [
+    {
+      "name": "home",
+      "path": "/dashboard",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 900,
+      "heading": [
+        {
+          "text": "让交通知识，成为你的专业助手",
+          "font": "34px",
+          "color": "rgb(16, 30, 59)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "chat",
+      "path": "/chat",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 900,
+      "heading": [
+        {
+          "text": "路面裂缝巡查记录要点",
+          "font": "16px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 900,
+      "heading": [
+        {
+          "text": "知识探索",
+          "font": "26px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "maintenance",
+      "path": "/maintenance",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 909,
+      "heading": [
+        {
+          "text": "公路养护助手",
+          "font": "28px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "knowledge",
+      "path": "/knowledge",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 900,
+      "heading": [
+        {
+          "text": "我的知识库",
+          "font": "26px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "rag",
+      "path": "/rag",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "scrollWidth": 1440,
+      "viewportWidth": 1440,
+      "pageHeight": 1002,
+      "heading": [
+        {
+          "text": "RAG 实验室",
+          "font": "26px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "home",
+      "path": "/dashboard",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "scrollWidth": 1920,
+      "viewportWidth": 1920,
+      "pageHeight": 1080,
+      "heading": [
+        {
+          "text": "让交通知识，成为你的专业助手",
+          "font": "34px",
+          "color": "rgb(16, 30, 59)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "chat",
+      "path": "/chat",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "scrollWidth": 1920,
+      "viewportWidth": 1920,
+      "pageHeight": 1080,
+      "heading": [
+        {
+          "text": "路面裂缝巡查记录要点",
+          "font": "16px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "explore",
+      "path": "/explore",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "scrollWidth": 1920,
+      "viewportWidth": 1920,
+      "pageHeight": 1080,
+      "heading": [
+        {
+          "text": "知识探索",
+          "font": "26px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "maintenance",
+      "path": "/maintenance",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "scrollWidth": 1920,
+      "viewportWidth": 1920,
+      "pageHeight": 1080,
+      "heading": [
+        {
+          "text": "公路养护助手",
+          "font": "28px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "knowledge",
+      "path": "/knowledge",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "scrollWidth": 1920,
+      "viewportWidth": 1920,
+      "pageHeight": 1080,
+      "heading": [
+        {
+          "text": "我的知识库",
+          "font": "26px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    },
+    {
+      "name": "rag",
+      "path": "/rag",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "scrollWidth": 1920,
+      "viewportWidth": 1920,
+      "pageHeight": 1113,
+      "heading": [
+        {
+          "text": "RAG 实验室",
+          "font": "26px",
+          "color": "rgb(17, 24, 39)"
+        }
+      ],
+      "images": []
+    }
+  ]
+}

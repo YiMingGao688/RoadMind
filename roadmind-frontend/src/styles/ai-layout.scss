@@ -1,0 +1,106 @@
+/* AI 应用外壳：精简导航、会话历史与页面工作区，不使用管理后台顶栏。 */
+.ai-app {
+  --sidebar-width: 232px;
+  --ai-toolbar-height: 56px;
+  --ai-content-max: 1280px;
+  --ai-page-gutter: 40px;
+  min-height: 100dvh;
+  font-size: var(--font-body);
+  line-height: var(--leading-body);
+  background: var(--canvas);
+}
+.ai-app svg.lucide { fill: none; stroke-width: var(--icon-stroke); stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.ai-app .ai-main { position: relative; min-width: 0; margin-left: var(--sidebar-width); padding: 0; min-height: 100dvh; background: var(--canvas); }
+.app-sidebar { position: fixed; inset: 0 auto 0 0; z-index: 50; display: flex; flex-direction: column; width: var(--sidebar-width); padding: 24px 16px 12px; border-right: 1px solid var(--line); background: #fff; }
+.ai-brand-row { display: flex; align-items: center; justify-content: space-between; gap: 4px; min-height: 40px; }
+.ai-brand { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+.ai-brand img { width: 32px; height: 32px; }
+.ai-brand strong { display: block; font-size: 19px; font-weight: 650; letter-spacing: -.6px; color: var(--ink); line-height: 24px; }
+.ai-brand small { display: block; font-size: 12px; color: var(--text); line-height: 18px; letter-spacing: .08em; }
+.sidebar-collapse { display: flex; align-items: center; justify-content: center; width: 26px; height: 30px; padding: 4px; border: 0; border-radius: var(--radius-sm); background: none; color: var(--muted); }
+.sidebar-collapse svg { width: 18px; height: 18px; }
+.sidebar-collapse:hover { color: var(--brand); background: var(--brand-soft); }
+.ai-app .sidebar-new-chat { width: 100%; height: 40px; margin: 24px 0 16px; gap: 4px; font-size: 14px; border-radius: 7px; }
+.ai-navigation { display: flex; flex-direction: column; gap: 4px; }
+.ai-navigation a { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 12px; border-radius: 7px; font-size: 14px; line-height: 24px; font-weight: 500; color: var(--text); position: relative; transition: background .15s, color .15s; }
+.ai-navigation a > svg { width: 19px; height: 19px; }
+.ai-navigation a:hover { background: #f3f6fb; color: var(--brand); }
+.ai-navigation a.active { color: var(--brand); background: var(--brand-soft); font-weight: 600; }
+.ai-navigation a.active::before { content: ''; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 2px; background: var(--brand); }
+.sidebar-history { margin-top: 32px; min-height: 0; overflow: auto; }
+.sidebar-history > div { display: flex; align-items: center; justify-content: space-between; padding: 0 8px 8px; color: var(--muted); font-size: 13px; }
+.sidebar-history .icon-button { width: 28px; height: 28px; padding: 5px; }
+.sidebar-history > button { width: 100%; padding: 10px 12px; display: block; text-align: left; border: 0; background: none; border-radius: 6px; color: var(--muted); font-size: 13px; line-height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sidebar-history > button:hover { background: #f3f6fb; color: var(--text); }
+.sidebar-history > button.active { color: var(--brand); background: var(--brand-soft); }
+.sidebar-history > p { padding: 8px; color: var(--muted); font-size: 13px; line-height: 24px; }
+.sidebar-account { margin-top: auto; padding-top: 24px; }
+.sidebar-account .el-dropdown { display: block; width: 100%; }
+.account-button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 8px 0; border: 0; background: transparent; text-align: left; color: var(--text); }
+.account-button:hover .account-name strong { color: var(--brand); }
+.account-avatar { display: inline-grid; place-items: center; width: 34px; height: 34px; flex-shrink: 0; border-radius: 50%; background: #e5ecff; color: #2548ae; font-size: 12px; font-weight: 600; }
+.account-name { min-width: 0; }
+.account-name strong { display: block; font-size: 13px; font-weight: 500; line-height: 20px; }
+.account-name small { display: block; font-size: 12px; color: var(--muted); line-height: 18px; }
+.account-button > svg { width: 14px; height: 14px; margin-left: auto; }
+.ai-toolbar { height: var(--ai-toolbar-height); display: flex; justify-content: flex-end; align-items: center; gap: 16px; padding: 0 var(--ai-page-gutter); background: #fff; border-bottom: 1px solid #f0f2f5; position: relative; z-index: 10; }
+.ai-toolbar-actions { display: flex; gap: 20px; align-items: center; }
+.ai-global-search { display: flex; align-items: center; gap: 8px; height: 32px; width: 248px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: var(--muted); font-size: 13px; }
+.ai-global-search > svg { width: 16px; height: 16px; }
+.ai-global-search > kbd { margin-left: auto; font: inherit; font-size: 12px; color: var(--muted); }
+.ai-global-search:hover { border-color: #b3c4ee; }
+.ai-demo-mode { display: flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; padding: 4px 0; border: 0; background: none; }
+.ai-demo-mode > svg { width: 16px; height: 16px; }
+.ai-demo-mode:hover { color: var(--brand); }
+.ai-toolbar .account-avatar { width: 30px; height: 30px; }
+.ai-route-content { min-height: calc(100dvh - var(--ai-toolbar-height)); padding: 32px var(--ai-page-gutter) 40px; }
+.ai-standard-page { max-width: var(--ai-content-max); margin: 0 auto; }
+.ai-page-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.ai-page-heading h1 { font-size: var(--font-title); line-height: 36px; font-weight: 600; color: var(--ink); letter-spacing: -.5px; }
+.ai-page-heading p { color: var(--muted); font-size: 15px; line-height: 26px; margin-top: 8px; }
+.ai-page-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.ai-page-actions .el-button + .el-button { margin: 0; }
+.ai-app .el-button { border-radius: var(--radius-md); height: 40px; }
+.ai-app :is(.el-input__inner, .el-textarea__inner, .el-select__selected-item, .el-select__placeholder) { font-family: var(--font-family-ui); }
+.ai-app .el-input__wrapper, .ai-app .el-select__wrapper { min-height: 40px; }
+.ai-app .el-form-item__label { padding: 0; margin-bottom: 8px; line-height: 24px; color: var(--text); font-size: 14px; font-weight: 500; }
+.ai-app .page-demo-boundary { color: var(--muted); font-size: 13px; line-height: 24px; margin-top: 24px; }
+.ai-app .demo-badge { color: #53627a; background: #f1f5fa; border-color: #e4eaf2; font-size: 12px; line-height: 18px; }
+.ai-app .ai-mobile-menu, .ai-mobile-chat-menu, .ai-mobile-backdrop { display: none; }
+.ai-app .ai-empty-state { display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 320px; text-align: center; padding: 24px; color: var(--muted); }
+.ai-empty-state > svg { width: 40px; height: 40px; color: #899aba; margin-bottom: 16px; }
+.ai-empty-state > h3 { font-size: 16px; margin-bottom: 8px; }
+.ai-empty-state > p { font-size: 14px; line-height: 24px; }
+.ai-app .icon-button:disabled { opacity: .5; }
+@media (min-width: 761px) {
+  .ai-app.is-collapsed { --sidebar-width: 76px; }
+  .is-collapsed .app-sidebar { padding: 20px 16px 12px; }
+  .is-collapsed .sidebar-label { display: none; }
+  .is-collapsed .ai-brand-row { flex-direction: column; gap: 12px; }
+  .is-collapsed .sidebar-new-chat { padding: 0; margin-top: 16px; }
+  .is-collapsed .sidebar-new-chat .el-icon { margin: 0; }
+  .is-collapsed .ai-navigation a { padding: 12px; justify-content: center; }
+  .is-collapsed .account-button { justify-content: center; }
+}
+@media (min-width: 1700px) { .ai-app { --ai-page-gutter: 56px; } .ai-route-content { padding-top: 40px; } }
+@media (max-width: 1150px) { .ai-app { --ai-page-gutter: 24px; } .ai-page-heading { gap: 16px; } .ai-page-heading p { font-size: 14px; } }
+@media (max-width: 760px) {
+  .ai-app { --ai-page-gutter: 20px; --sidebar-width: 232px; }
+  .app-sidebar { transform: translateX(-100%); transition: transform .2s; }
+  .app-sidebar.mobile-open { transform: translateX(0); }
+  .ai-app .ai-main { margin-left: 0; }
+  .ai-app .ai-mobile-menu { display: inline-flex; margin-right: auto; }
+  .ai-app .ai-mobile-backdrop { display: block; position: fixed; z-index: 49; inset: 0; border: 0; background: #0f172a40; }
+  .sidebar-collapse { display: none; }
+  .ai-toolbar { padding: 0 16px; gap: 8px; }
+  .ai-toolbar-actions { gap: 12px; }
+  .ai-global-search { width: 32px; height: 32px; padding: 7px; border-color: transparent; background: transparent; }
+  .ai-global-search span, .ai-global-search kbd { display: none; }
+  .ai-page-heading { display: block; margin-bottom: 24px; }
+  .ai-page-heading h1 { font-size: 26px; }
+  .ai-page-heading > .demo-badge, .ai-page-heading > .text-link { margin-top: 12px; }
+  .ai-page-actions { margin-top: 16px; }
+  .ai-route-content { padding-top: 24px; }
+  .ai-app .responsive-drawer { width: min(100%, 560px) !important; }
+  .responsive-dialog { max-width: calc(100vw - 24px); }
+}

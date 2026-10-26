@@ -1,0 +1,6 @@
+# 前端自动化验证生成的本地产物。
+test-results/
+playwright-report/
+
+test-results-api/
+playwright-report-api/

@@ -1,0 +1,28 @@
+{
+  "documentCount": 0,
+  "oldTestBackendPid": 80692,
+  "beforeRestart": {
+    "id": "75",
+    "name": "持久化验收-20261026175046",
+    "description": "独立测试库中的真实持久化验收记录",
+    "category": "日常养护",
+    "documentCount": 0,
+    "createdAt": "2026-10-26T09:50:47.139Z",
+    "updatedAt": "2026-10-26T09:50:47.139Z"
+  },
+  "afterRestart": {
+    "id": "75",
+    "name": "持久化验收-20261026175046",
+    "description": "独立测试库中的真实持久化验收记录",
+    "category": "日常养护",
+    "documentCount": 0,
+    "createdAt": "2026-10-26T09:50:47.139Z",
+    "updatedAt": "2026-10-26T09:50:47.139Z"
+  },
+  "id": "75",
+  "database": "roadmind_test",
+  "matched": true,
+  "newTestBackendPid": 30540,
+  "developmentDatabaseTestWrites": 0,
+  "cleanup": "API logical delete; physical row retained with deleted=1"
+}

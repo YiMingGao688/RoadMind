@@ -1,0 +1,24 @@
+/* MiSans 字体来自小米官方包，文件保持原样；许可与来源记录见 assets/fonts。 */
+@font-face {
+  font-family: 'MiSans';
+  src: local('MiSans Regular'), url('../assets/fonts/MiSans-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MiSans';
+  src: local('MiSans Semibold'), url('../assets/fonts/MiSans-Semibold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+/* Inter 用于英文、数字与西文标点；中文字符由后续 MiSans 字族提供。 */
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/InterVariable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0000-024F, U+1E00-1EFF, U+2000-206F, U+20A0-20CF;
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "suite": "com.roadmind.common.exception.GlobalExceptionHandlerTest",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "suite": "com.roadmind.health.HealthControllerTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "suite": "com.roadmind.knowledge.KnowledgeBaseIntegrationTest",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+]
